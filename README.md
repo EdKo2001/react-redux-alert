@@ -1,6 +1,20 @@
-# Getting Started with Create React App
+## Stack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-   React
+-   TypeScript
+-   Ant Design
+-   Redux + Redux Toolkit
+
+## Mission
+
+Implemented redux based alert component.
+The main reason that prompted me to create is that calling Alert from any component made the code messy and duplicated code, so for now you can just call the show alert method with the message and alert type and it will do the rest.
+
+**Example**:
+
+    <Button onClick={() => dispatch(showModal({ message: "It's a success alert", type: "success" }))}>
+	    Show Success Alert
+    </Button>
 
 ## Available Scripts
 
