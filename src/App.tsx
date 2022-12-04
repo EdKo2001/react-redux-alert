@@ -1,26 +1,68 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Button } from "antd";
 
-function App() {
+import { useDispatch } from "react-redux";
+
+import { showModal } from "./features/alert/alertSlice";
+
+const App = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button
+        size="large"
+        onClick={() =>
+          dispatch(
+            showModal({ message: "It's a success alert", type: "success" })
+          )
+        }
+        style={{
+          background: "#f6ffed",
+          border: "1px solid #b7eb8f",
+          color: "black",
+        }}
+      >
+        Show Success Alert
+      </Button>
+      <Button
+        size="large"
+        type="primary"
+        onClick={() =>
+          dispatch(showModal({ message: "It's a error alert", type: "error" }))
+        }
+        danger
+      >
+        Show Error Alert
+      </Button>
+      <Button
+        size="large"
+        type="primary"
+        onClick={() =>
+          dispatch(showModal({ message: "It's a info alert", type: "info" }))
+        }
+      >
+        Show Info Alert
+      </Button>
+      <Button
+        size="large"
+        onClick={() =>
+          dispatch(
+            showModal({
+              message: "It's a warning alert",
+              type: "warning",
+            })
+          )
+        }
+        style={{
+          background: "#fffbe6",
+          border: "1px solid #ffe58f",
+          color: "black",
+        }}
+      >
+        Show Warning Alert
+      </Button>
     </div>
   );
-}
+};
 
 export default App;

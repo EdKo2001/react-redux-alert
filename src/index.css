@@ -1,13 +1,32 @@
+/* Ant Design Styles */
+@import "../node_modules/antd/dist/reset.css";
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 100vh;
+  font-size: 20px;
+}
+
+.instant-alert {
+  position: fixed;
+  top: 15vh;
+  right: -100vw;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  z-index: 999;
+}
+
+.instant-alert.active {
+  right: 0;
+  opacity: 1;
 }
