@@ -28,7 +28,7 @@ const App = () => {
         size="large"
         type="primary"
         onClick={() =>
-          dispatch(showModal({ message: "It's a error alert", type: "error" }))
+          dispatch(showModal({ message: "It's an error alert", type: "error" }))
         }
         danger
       >
@@ -38,7 +38,7 @@ const App = () => {
         size="large"
         type="primary"
         onClick={() =>
-          dispatch(showModal({ message: "It's a info alert", type: "info" }))
+          dispatch(showModal({ message: "It's an info alert", type: "info" }))
         }
       >
         Show Info Alert
