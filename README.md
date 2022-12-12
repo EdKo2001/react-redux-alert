@@ -1,3 +1,9 @@
+<h1 align="center">REACT REDUX ALERT</h1>
+
+<p align="center">
+    <img align="center" src="https://user-images.githubusercontent.com/53624093/207136861-009ff481-edd7-40bc-9a99-e115384db2b2.gif">
+</p>
+
 ## Stack
 
 -   React
